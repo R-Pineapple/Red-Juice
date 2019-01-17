@@ -71,12 +71,12 @@ END ex1;
 Will output (
 ```json
 {
-    content : {
+    "content" : {
         "" : "$\frac{2}{\frac{3}{2}}$\n",
         "#ex1" : "$2\times \frac{3}{2}$\nthis is a test\n",
         "#ex1#partA" : "this is partA\n"
     },
-    timers : {
+    "timers" : {
         "#ex1" : 60
     }
 }
