@@ -2,7 +2,9 @@ dist: xenial
 language: node_js
 node_js:
   - "8"
-cache: npm
+cache:
+  - npm
+  - ./build
 addons:
   apt:
     packages:
@@ -12,9 +14,7 @@ before_install:
   - gcc -v
   - python -V
 before_script:
-  - cat package-lock.json
-  - mkdir build
-  - cp node_modules/giac/build/Release/giac.node build/giac.node
+  - mv node_modules/giac/build .
   - npm install -g jest
   - npm install -g jshint
 script:
