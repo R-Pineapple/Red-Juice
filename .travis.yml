@@ -4,8 +4,13 @@ node_js:
 branches:
   only:
   - master
+addons:
+  apt:
+    packages:
+    - gcc
+    - libgmp-dev
+    - libmpfr-dev
 before_install:
-  - sudo apt install gcc libgmp-dev libmpfr-dev
   - npm i -g npm@6.5.0
 cache: npm
 before_script:
