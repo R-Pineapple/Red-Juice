@@ -7,7 +7,7 @@ branches:
 addons:
   apt:
     packages:
-    - gcc
+    - gcc-5
     - libgmp-dev
     - libmpfr-dev
     - python2.7
