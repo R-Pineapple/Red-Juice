@@ -1,4 +1,4 @@
-# Red Juice v1.4.3 - Specification sheet
+# Red Juice v1.4.3
 
 ![Red Juice logo](redjuice.png)
 
@@ -72,12 +72,12 @@ Will output (
 ```json
 {
     content : {
-        '' : '$\frac{2}{\frac{3}{2}}$\n',
-        '#ex1' : '$2\times \frac{3}{2}$\nthis is a test\n',
-        '#ex1#partA' : 'this is partA\n'
+        "" : "$\frac{2}{\frac{3}{2}}$\n",
+        "#ex1" : "$2\times \frac{3}{2}$\nthis is a test\n",
+        "#ex1#partA" : "this is partA\n"
     },
     timers : {
-        '#ex1' : 60
+        "#ex1" : 60
     }
 }
 ```
