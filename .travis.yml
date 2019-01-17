@@ -12,6 +12,7 @@ before_install:
   - gcc -v
   - python -V
 before_script:
+  - cat package-lock.json
   - mkdir build
   - cp node_modules/giac/build/Release/giac.node build/giac.node
   - npm install -g jest

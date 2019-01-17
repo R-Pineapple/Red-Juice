@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Klemek/Red-Juice.svg?branch=master)](https://travis-ci.org/Klemek/Red-Juice)
 # Red Juice v1.4.3
 
 ![Red Juice logo](redjuice.png)
