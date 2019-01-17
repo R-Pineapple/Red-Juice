@@ -7,9 +7,10 @@ branches:
 addons:
   apt:
     packages:
-    - gcc
+    - gcc-6
     - libgmp-dev
     - libmpfr-dev
+    - python2.7
 before_install:
   - npm i -g npm@6.5.0
 cache: npm
