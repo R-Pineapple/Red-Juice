@@ -4,7 +4,6 @@ node_js:
   - "8"
 cache:
   - npm
-  - ./build
 addons:
   apt:
     packages:
@@ -13,6 +12,7 @@ before_install:
   - npm i -g npm@6.5.0
   - gcc -v
   - python -V
+  - ls -la
 install:
   - npm install
 before_script:
