@@ -15,11 +15,11 @@ const random = {
 const functions = require('./red-juice-functions')(random);
 
 /**
- * Red Juice interpreter v1.4.3
+ * Red Juice interpreter v1.4.4
  */
 
 const interpreter = {
-  version: '1.4.3',
+  version: '1.4.4',
   debug: false, //put tdo comment when true, remove when done
   latex: true, //enable latex var output
   limit: 1e4, //limit of lines computed
@@ -213,7 +213,7 @@ const interpreter = {
           else
             errors.push(['Argument separator outside of function', i]);
         } else if (token === '[') {
-          if (i === 0 || !/^([a-zA-Z][a-zA-Z0-9_]*|\))$/.test(tokens[i - 1]))
+          if (i === 0 || !/^([a-zA-Z][a-zA-Z0-9_]*|\)|])$/.test(tokens[i - 1]))
             errors.push(['Invalid bracket', i]);
           brac.push(i);
         } else if (token === ']') {

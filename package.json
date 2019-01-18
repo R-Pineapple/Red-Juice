@@ -1,6 +1,6 @@
 {
   "name": "red-juice",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Official Red Juice language interpreter",
   "main": "red-juice.js",
   "directories": {

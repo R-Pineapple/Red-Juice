@@ -61,7 +61,7 @@ test('verify tokens', () => {
     .toEqual([]);
   expect(interpreter.verifyTokens(env, interpreter.tokenize('sin ( max ( 2, 3 / 3 * pi ))')))
     .toEqual([]);
-  expect(interpreter.verifyTokens(env, interpreter.tokenize('RAND((1.1/3),5)')))
+  expect(interpreter.verifyTokens(env, interpreter.tokenize('RAND((1.1/3),5)[0][1]')))
     .toEqual([]);
   expect(interpreter.verifyTokens(env, interpreter.tokenize('1 + 100 + 0.1 + 100.1 + -1 + -0.5 + -100 + 1e05 + 1e-5 + -51.56e+056')))
     .toEqual([]);
@@ -109,8 +109,8 @@ test('shunting yard', () => {
     .toEqual([]);
   expect(interpreter.shuntingYard(interpreter.tokenize('RAND(10,20)/-RAND(1000,2000)')))
     .toEqual(['10', '20', 'RAND', '1000', '2000', 'RAND', '.-', '/']);
-  expect(interpreter.shuntingYard(interpreter.tokenize('IDN(3)[1] * (~RANDMAT(3,3,4,5))[2+3]')))
-    .toEqual(['3', 'IDN', '1', 'get', '3', '3', '4', '5', 'RANDMAT', '~', '2', '3', '+', 'get', '*']);
+  expect(interpreter.shuntingYard(interpreter.tokenize('IDN(3)[1][2] * (~RANDMAT(3,3,4,5))[2+3]')))
+    .toEqual(['3', 'IDN', '1', 'get', '2', 'get', '3', '3', '4', '5', 'RANDMAT', '~', '2', '3', '+', 'get', '*']);
 });
 
 
@@ -145,8 +145,8 @@ test('eval expr', () => {
     .toEqual('false');
   expect(interpreter.evalExpr(env, interpreter.tokenize('ln(e^256)')))
     .toEqual('256');
-  expect(interpreter.evalExpr(env, interpreter.tokenize('IDN(3)[0] * VEC3(3,2,1)')))
-    .toEqual('3');
+  expect(interpreter.evalExpr(env, interpreter.tokenize('IDN(3)[0] * VEC3(3,2,1) + ONES(3,3)[1][1]')))
+    .toEqual('4');
   expect(interpreter.evalExpr(env, interpreter.tokenize('ABC_03 .* IDN(3)')))
     .toEqual('[[1,0,0],[0,5,0],[0,0,9]]');
 });

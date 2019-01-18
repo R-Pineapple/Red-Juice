@@ -1,4 +1,4 @@
-# Red Juice v1.4.3
+# Red Juice v1.4.4
 
 [![npm version](https://badge.fury.io/js/red-juice.svg)](https://www.npmjs.com/package/red-juice) [![Build Status](https://travis-ci.org/Klemek/Red-Juice.svg?branch=master)](https://travis-ci.org/Klemek/Red-Juice)
 
@@ -10,11 +10,14 @@ Red Juice is a home-made language with the purpose of procedurally generate math
 You can output lines and equations while executing formal expressions and storing them in variables.
 
 Since v1.4, it is now a Turing Complete language.
-## Usage
-### With node
+## Installation
 ```
 npm install red-juice
 ```
+As Red Juice depends on giac, you should see https://www.npmjs.com/package/giac for more info on installation
+## Usage
+### With node
+
 then
 ```javascript
 const interpreter = require('red-juice');
@@ -32,11 +35,7 @@ if(errors.length){
 
 ### Commande line
 ```
-npm install -g red-juice
-```
-then
-```
-red-juice inputFile [-v][-h][-q][-d][-o outputFile][-j][-f][-s seed][-l]
+node red-juice.js inputFile [-v][-h][-q][-d][-o outputFile][-j][-f][-s seed][-l]
 
 -v / --verbose : more info
 -h / --help : show this message
@@ -270,6 +269,7 @@ END part1;
 
 ## Changelog
 
+* **1.4.4**: multiple subscriptions in formula (ex : [1][2])
 * **1.4.3**: `zeros` and `ones` matrix functions
 * **1.4.2**:
     * `VAR A[B] = ...;` var subscription by other var
