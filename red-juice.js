@@ -213,7 +213,7 @@ const interpreter = {
           else
             errors.push(['Argument separator outside of function', i]);
         } else if (token === '[') {
-          if (i === 0 || !/^([a-zA-Z][a-zA-Z0-9_]*|\))$/.test(tokens[i - 1]))
+          if (i === 0 || !/^([a-zA-Z][a-zA-Z0-9_]*|\)|])$/.test(tokens[i - 1]))
             errors.push(['Invalid bracket', i]);
           brac.push(i);
         } else if (token === ']') {
