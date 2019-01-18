@@ -15,11 +15,11 @@ const random = {
 const functions = require('./red-juice-functions')(random);
 
 /**
- * Red Juice interpreter v1.4.3
+ * Red Juice interpreter v1.4.4
  */
 
 const interpreter = {
-  version: '1.4.3',
+  version: '1.4.4',
   debug: false, //put tdo comment when true, remove when done
   latex: true, //enable latex var output
   limit: 1e4, //limit of lines computed
