@@ -13,8 +13,6 @@ before_install:
   - npm i -g npm@6.5.0
   - gcc -v
   - python -V
-install:
-  - npm install
 before_script:
   - mkdir build
   - cp node_modules/giac/build/Release/giac.node build/giac.node
