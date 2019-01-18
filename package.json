@@ -1,6 +1,6 @@
 {
   "name": "red-juice",
-  "version": "1.4.4",
+  "version": "1.4.3",
   "description": "Official Red Juice language interpreter",
   "main": "red-juice.js",
   "directories": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/Klemek/red-juice#readme",
   "dependencies": {
-    "bindings": "^1.3.0",
-    "giac": "^1.23.66164"
+    "bindings": "~1.2.1",
+    "giac": "^1.23.66412"
   }
 }
