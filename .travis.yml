@@ -13,8 +13,11 @@ before_install:
   - npm i -g npm@6.5.0
   - gcc -v
   - python -V
+install:
+  - npm install
 before_script:
-  - mv node_modules/giac/build .
+  - mkdir build
+  - cp node_modules/giac/build/Release/giac.node build/giac.node
   - npm install -g jest
   - npm install -g jshint
 script:
