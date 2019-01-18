@@ -2,24 +2,26 @@ dist: xenial
 language: node_js
 node_js:
   - "8"
+cache:
+  npm: true
+  directories:
+    - node_modules # NPM packages
 addons:
   apt:
-    sources:
-    - ubuntu-toolchain-r-test
     packages:
-    - build-essential
-    - software-properties-common
-    - gcc-6
-    - libgmp-dev
     - libmpfr-dev
-    - python2.7
 before_install:
   - npm i -g npm@6.5.0
-  - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-6 /usr/bin/gcc
   - gcc -v
   - python -V
-cache: npm
+  - ls -la
+install:
+  - npm install
 before_script:
   - mkdir build
-  - cp node_modules/giac/Release/giac.node build/giac.node
+  - cp node_modules/giac/build/Release/giac.node build/giac.node
   - npm install -g jest
+  - npm install -g jshint
+script:
+  - npm test
+  - jshint .

@@ -1,5 +1,7 @@
 # Red Juice v1.4.3
 
+[![npm version](https://badge.fury.io/js/red-juice.svg)](https://www.npmjs.com/package/red-juice) [![Build Status](https://travis-ci.org/Klemek/Red-Juice.svg?branch=master)](https://travis-ci.org/Klemek/Red-Juice)
+
 ![Red Juice logo](redjuice.png)
 
 ## Introduction
