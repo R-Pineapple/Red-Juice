@@ -22,6 +22,7 @@ before_script:
   - cp node_modules/giac/build/Release/giac.node build/giac.node
   - npm install -g jest
   - npm install -g jshint
+  - npm install -g coveralls
 script:
-  - npm test
+  - jest --coverage --coverageReporters=text-lcov | coveralls
   - jshint .
