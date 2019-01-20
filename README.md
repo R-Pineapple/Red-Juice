@@ -1,6 +1,8 @@
 # Red Juice v1.4.4
 
-[![npm version](https://badge.fury.io/js/red-juice.svg)](https://www.npmjs.com/package/red-juice) [![Build Status](https://travis-ci.org/Klemek/Red-Juice.svg?branch=master)](https://travis-ci.org/Klemek/Red-Juice)
+[![npm version](https://img.shields.io/npm/v/red-juice.svg)](https://www.npmjs.com/package/red-juice)
+[![Build Status](https://img.shields.io/travis/Klemek/Red-Juice.svg?branch=master)](https://travis-ci.org/Klemek/Red-Juice)
+[![Coverage Status](https://img.shields.io/coveralls/github/Klemek/Red-Juice.svg)](https://coveralls.io/github/Klemek/Red-Juice?branch=master)
 
 ![Red Juice logo](redjuice.png)
 
