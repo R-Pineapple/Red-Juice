@@ -1,4 +1,4 @@
-# ![Red Juice logo](redjuice.svg) Red Juice v1.4.4
+# ![Red Juice logo](redjuice.svg) Red Juice v1.4.5
 
 [![npm version](https://img.shields.io/npm/v/red-juice.svg)](https://www.npmjs.com/package/red-juice)
 [![Build Status](https://img.shields.io/travis/Klemek/Red-Juice.svg?branch=master)](https://travis-ci.org/Klemek/Red-Juice)
@@ -10,9 +10,24 @@ Red Juice is a home-made language with the purpose of procedurally generate math
 You can output lines and equations while executing formal expressions and storing them in variables.
 
 Since v1.4, it is now a Turing Complete language.
+
 ## Installation
+First, you need to build giac (see [this page](https://www.npmjs.com/package/giac) for more info) :
+
+**Warning : Giac needs a node version before 12**
+
+```bash
+# ensure you have everything
+sudo apt-get install build-essential libgmp-dev libmpfr-dev
+# build with max capacity (might be long anyway)
+JOBS=4 npm install giac@latest
+# fix build output location
+mkdir build
+cp node_modules/giac/build/Release/giac.node build/giac.node
 ```
-npm install red-juice
+Then you can install by skipping giac build :
+```bash
+npm install red-juice --production
 ```
 As Red Juice depends on giac, you should see https://www.npmjs.com/package/giac for more info on installation
 ## Usage
@@ -269,6 +284,7 @@ END part1;
 
 ## Changelog
 
+* **1.4.5**: added max node version + more info to install
 * **1.4.4**: multiple subscriptions in formula (ex : [1][2])
 * **1.4.3**: `zeros` and `ones` matrix functions
 * **1.4.2**:
