@@ -16,10 +16,9 @@ before_install:
   - python -V
   - ls -la
 install:
-  - npm install
+  - JOBS=4 npm install giac@latest
+  - npm install --production
 before_script:
-  - mkdir build
-  - cp node_modules/giac/build/Release/giac.node build/giac.node
   - npm install -g jest
   - npm install -g jshint
   - npm install -g coveralls
