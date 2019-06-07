@@ -17,8 +17,6 @@ before_install:
   - ls -la
 install:
   - JOBS=4 npm install giac@latest
-  - mkdir build
-  - cp node_modules/giac/build/Release/giac.node build/giac.node
   - npm install --production
 before_script:
   - npm install -g jest
