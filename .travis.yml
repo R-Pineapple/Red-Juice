@@ -23,5 +23,5 @@ before_script:
   - npm install -g jshint
   - npm install -g coveralls
 script:
-  - jest --coverage --coverageReporters=text-lcov && cat ./coverage/lcov.info | coveralls
+  - jest --coverage && cat ./coverage/lcov.info | coveralls
   - jshint .
