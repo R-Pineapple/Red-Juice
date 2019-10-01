@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/red-juice.svg)](https://www.npmjs.com/package/red-juice)
 [![Build Status](https://img.shields.io/travis/Klemek/Red-Juice.svg?branch=master)](https://travis-ci.org/Klemek/Red-Juice)
+[![Scc Count Badge](https://sloc.xyz/github/klemek/red-juice/?category=code)](https://github.com/boyter/scc/#badges-beta)
 [![Coverage Status](https://img.shields.io/coveralls/github/Klemek/Red-Juice.svg)](https://coveralls.io/github/Klemek/Red-Juice?branch=master)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Klemek/Red-Juice.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Klemek/Red-Juice/context:javascript)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Klemek/Red-Juice.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Klemek/Red-Juice/alerts/)
