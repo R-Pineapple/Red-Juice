@@ -13,5 +13,8 @@ test:
 lint:
 	npx eslint .
 
+lint-install:
+	npm install --no-package-lock --no-save eslint
+
 lint-fix:
 	npx eslint . --fix
