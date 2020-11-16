@@ -2,13 +2,13 @@ const interpreter = require('../src/red-juice');
 const functions = require('../src/red-juice-functions')(interpreter.random);
 
 function testFn(fn, args, res) {
-  test(fn, () => {
-    expect(functions[fn]).toBeDefined();
-    expect(functions[fn].exec(args)).toEqual(res);
-  });
+    test(fn, () => {
+        expect(functions[fn]).toBeDefined();
+        expect(functions[fn].exec(args)).toEqual(res);
+    });
 }
 
-//basic
+// basic
 testFn('abs', ['-1'], '1');
 testFn('sign', ['-256'], '-1');
 testFn('max', ['-256', '256'], '256');
@@ -24,14 +24,14 @@ testFn('log', ['1'], '0');
 testFn('ln', ['1'], '0');
 testFn('log10', ['10'], '1');
 
-//complexes
+// complexes
 testFn('re', ['1+i'], '1');
 testFn('im', ['1+i'], '1');
 testFn('abs', ['1+i'], '√2');
 testFn('arg', ['1+i'], 'pi/4');
 testFn('conj', ['1+i'], '1-i');
 
-//trigonometry
+// trigonometry
 testFn('sin', ['-pi/2'], '-1');
 testFn('cos', ['pi'], '-1');
 testFn('tan', ['pi/4'], '1');
@@ -42,7 +42,7 @@ testFn('sinh', ['0'], '0');
 testFn('cosh', ['0'], '1');
 testFn('tanh', ['0'], '0');
 
-//operators
+// operators
 testFn('neg', ['-5'], '5');
 testFn('plus', ['-5', '4'], '-1');
 testFn('minus', ['-5', '4'], '-9');
@@ -59,14 +59,14 @@ testFn('lt', ['-5', '2'], 'true');
 testFn('and', ['true', 'false'], 'false');
 testFn('or', ['true', 'false'], 'true');
 
-//vectors
+// vectors
 testFn('times', ['[1,2]', '[3,4]'], '11');
 testFn('cross', ['[1,2,3]', '[4,5,6]'], '[-3,6,-3]');
 
 testFn('vec1', ['1'], '[1]');
 testFn('vec3', ['1', '2', '3'], '[1,2,3]');
 
-//matrices
+// matrices
 testFn('times', ['[[0,2],[3,0]]', '[[1,1],[1,1]]'], '[[2,2],[3,3]]');
 testFn('mtimes', ['[[0,2],[3,0]]', '[[1,2],[2,1]]'], '[[0,4],[6,0]]');
 testFn('div', ['1', '[[0,2],[3,0]]'], '[[0,1/3],[1/2,0]]');
@@ -87,39 +87,39 @@ testFn('get', ['5', '1'], '5');
 testFn('len', ['[[0,2],[3,0]]'], '2');
 testFn('len', ['[0,2]'], '2');
 
-//random
+// random
 test('rand', () => {
-  expect(functions['rand']).toBeDefined();
-  expect(functions['rand'].exec([0, 0])).toEqual(0);
-  expect(functions['rand'].exec([1, 2])).not.toEqual(0);
+    expect(functions['rand']).toBeDefined();
+    expect(functions['rand'].exec([0, 0])).toEqual(0);
+    expect(functions['rand'].exec([1, 2])).not.toEqual(0);
 });
 
 test('randnn', () => {
-  expect(functions['randnn']).toBeDefined();
-  expect(functions['randnn'].exec([0, 0])).toEqual(0);
-  expect(functions['randnn'].exec([0, 1])).toEqual(1);
+    expect(functions['randnn']).toBeDefined();
+    expect(functions['randnn'].exec([0, 0])).toEqual(0);
+    expect(functions['randnn'].exec([0, 1])).toEqual(1);
 });
 
 test('randvec', () => {
-  expect(functions['randvec']).toBeDefined();
-  expect(functions['randvec'].exec([2, 0, 0])).toEqual('[0,0]');
-  expect(functions['randvec'].exec([2, 1, 2])).not.toEqual('[0,0]');
+    expect(functions['randvec']).toBeDefined();
+    expect(functions['randvec'].exec([2, 0, 0])).toEqual('[0,0]');
+    expect(functions['randvec'].exec([2, 1, 2])).not.toEqual('[0,0]');
 });
 
 test('randmat', () => {
-  expect(functions['randmat']).toBeDefined();
-  expect(functions['randmat'].exec([3, 2, 0, 0])).toEqual('[[0,0],[0,0],[0,0]]');
-  expect(functions['randmat'].exec([3, 2, 1, 2])).not.toEqual('[[0,0],[0,0],[0,0]]');
+    expect(functions['randmat']).toBeDefined();
+    expect(functions['randmat'].exec([3, 2, 0, 0])).toEqual('[[0,0],[0,0],[0,0]]');
+    expect(functions['randmat'].exec([3, 2, 1, 2])).not.toEqual('[[0,0],[0,0],[0,0]]');
 });
 
 function testSpFn(fn, args, res) {
-  test(fn, () => {
-    expect(functions[fn]).toBeDefined();
-    expect(functions[fn](args)).toEqual(res);
-  });
+    test(fn, () => {
+        expect(functions[fn]).toBeDefined();
+        expect(functions[fn](args)).toEqual(res);
+    });
 }
 
-//special functions
+// special functions
 testSpFn('$', '1/2', '\\frac{1}{2}');
 testSpFn('$', '[1,2]', '\\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}');
 testSpFn('@', 'x+x', '2*x');

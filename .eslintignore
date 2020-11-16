@@ -1,0 +1,6 @@
+node_modules/
+build/
+coverage/
+.idea/
+package.json
+package-lock.json

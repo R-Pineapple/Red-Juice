@@ -1,0 +1,54 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "indent": [
+            "warn",
+            4
+        ],
+        "linebreak-style": [
+            "warn",
+            "unix"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "semi": [
+            "warn",
+            "always"
+        ],
+        "space-infix-ops": [
+          "warn"
+        ],
+        "space-unary-ops": [
+          "warn"
+        ],
+        "spaced-comment": [
+          "warn"
+        ]
+    },
+    "overrides": [
+      {
+        "files": ["tests/**/*.js"],
+        "globals": {
+          "jest": "readable",
+          "test": "writable",
+          "expect": "readable",
+          "describe": "readable",
+          "beforeAll": "readable",
+          "afterAll": "readable",
+          "beforeEach": "readable",
+          "afterEach": "readable",
+          "fail": "readable"
+        }
+      }
+    ]
+}
