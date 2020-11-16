@@ -1,5 +1,5 @@
-const interpreter = require('../red-juice');
-const functions = require('../red-juice-functions')(interpreter.random);
+const interpreter = require('../src/red-juice');
+const functions = require('../src/red-juice-functions')(interpreter.random);
 
 function testFn(fn, args, res) {
   test(fn, () => {

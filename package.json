@@ -2,7 +2,7 @@
   "name": "red-juice",
   "version": "1.4.6",
   "description": "Official Red Juice language interpreter",
-  "main": "red-juice.js",
+  "main": "src/red-juice.js",
   "directories": {
     "test": "tests"
   },
@@ -32,6 +32,8 @@
     "bindings": "~1.5.0"
   },
   "devDependencies": {
-    "giac": "^1.23.68505"
+    "giac": "^1.23.68505",
+    "eslint": "^7.13.0",
+    "jest": "^24.8.0"
   }
 }

@@ -1,4 +1,4 @@
-const interpreter = require('../red-juice');
+const interpreter = require('../src/red-juice');
 
 test('is numeric', () => {
   expect(interpreter.isNumeric('a')).toEqual(false);
