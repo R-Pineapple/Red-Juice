@@ -13,8 +13,5 @@ test:
 lint:
 	npx eslint .
 
-lint-install:
-	npm install eslint
-
 lint-fix:
 	npx eslint . --fix
