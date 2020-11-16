@@ -33,6 +33,10 @@
         ],
         "spaced-comment": [
           "warn"
+        ],
+        "space-before-blocks": [
+          "warn",
+          "always"
         ]
     },
     "overrides": [

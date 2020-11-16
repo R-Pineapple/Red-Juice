@@ -7,6 +7,7 @@
     "test": "tests"
   },
   "scripts": {
+    "start": "node src/server.js",
     "test": "jest tests/*.test.js --silent --coverage",
     "install": "mkdir build || rm -rf build/* && find \"$INIT_CWD\" -name \"*giac.node\" -exec cp {} build/giac.node \\;"
   },
@@ -29,11 +30,15 @@
     "node": "<0.12"
   },
   "dependencies": {
-    "bindings": "~1.5.0"
+    "bindings": "~1.5.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "giac": "^1.23.68505",
     "eslint": "^7.13.0",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "supertest": "^6.0.1"
   }
 }

@@ -16,4 +16,6 @@ RUN mv node_modules/giac/build .
 COPY package*.json ./
 RUN npm install
 
+EXPOSE 8274
+
 COPY . .
