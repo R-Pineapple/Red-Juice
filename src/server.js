@@ -39,9 +39,7 @@ app.all('/verify', function(req, res) {
     if (!req.body.code) return res.status(400).json(error('Missing code.'));
     try {
         const errors = interpreter.verify(req.body.code);
-        return res.json(ok({
-            errors:errors
-        }));
+        return res.json(ok(errors));
     } catch(e) {
         return res.status(500).json(error(e));
     }

@@ -73,9 +73,7 @@ test('POST /verify 200 no errors', (done) => {
         .then((response) => {
             data.testCode(response, 200);
             expect(response.statusCode).toBe(200);
-            expect(response.body.result).toEqual({
-                errors: []
-            });
+            expect(response.body.result).toEqual([]);
             done();
         });
 });
@@ -89,9 +87,7 @@ test('POST /verify 200 with errors', (done) => {
         .then((response) => {
             data.testCode(response, 200);
             expect(response.statusCode).toBe(200);
-            expect(response.body.result).toEqual({
-                errors: [['Not enough tokens', 3, 13, 1]]
-            });
+            expect(response.body.result).toEqual([['Not enough tokens', 3, 13, 1]]);
             done();
         });
 });

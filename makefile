@@ -3,7 +3,6 @@ build:
 
 start:
 	docker run \
-		--stop-timeout 310 \
 		-v ${PWD}/src:/usr/src/app/src:ro \
 		-v ${PWD}/package.json:/usr/src/app/package.json:ro \
 		-p 8274:8274 \
