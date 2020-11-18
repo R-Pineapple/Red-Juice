@@ -15,7 +15,7 @@ test:
 		-v ${PWD}/package.json:/usr/src/app/package.json:ro \
 		-v ${PWD}/tests:/usr/src/app/tests:ro \
 		-v ${PWD}/coverage:/usr/src/app/coverage \
-		-t red-juice "npx" "jest" "--coverage"
+		red-juice "npx" "jest" "--coverage" "--runInBand" "--colors" "--verbose"
 
 lint:
 	npx eslint .
