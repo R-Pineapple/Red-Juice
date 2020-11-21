@@ -1,5 +1,6 @@
 build:
 	docker build -t red-juice .
+	if [ ! -f "./package-lock.json" ]; then docker run --rm red-juice "cat" "package-lock.json" > package-lock.json; fi
 
 start:
 	docker run \
